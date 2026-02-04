@@ -6,12 +6,19 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#0f0f14">
+    <meta name="theme-color" content="#0a0a0b">
+    <meta name="description" content="ProCode Studio - Professional Code Editor for managing your project files with ease.">
+    <meta name="keywords" content="ProCode, Code Editor, IDE, Professional Editor, File Manager, Web IDE">
+    <meta name="author" content="Abir Arafat Chawdhury (@ISmartCoder)">
+    <meta property="og:title" content="ProCode Studio - Professional Code Editor">
+    <meta property="og:description" content="Professional Code Editor for managing your project files with ease.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <title>ProCode Studio - Professional Code Editor</title>
     <link rel="icon" href="https://i.ibb.co/cXKbHb7K/photo-2025-08-09-10-06-41.jpg" type="image/jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         *, *::before, *::after {
@@ -21,62 +28,42 @@
         }
 
         :root {
-            --bg-primary: #0f0f14;
-            --bg-secondary: #16161d;
-            --bg-tertiary: #1c1c26;
-            --bg-card: #1e1e2a;
-            --bg-card-hover: #252533;
-            --bg-input: #181820;
-            --bg-overlay: rgba(15, 15, 20, 0.95);
-            
-            --text-primary: #f8f9fa;
-            --text-secondary: #b4b7c0;
-            --text-muted: #808390;
-            --text-dim: #5a5d6a;
-            
-            --border: rgba(255, 255, 255, 0.06);
-            --border-hover: rgba(255, 255, 255, 0.12);
-            --border-focus: rgba(255, 255, 255, 0.18);
-            
-            --primary: #5b7fff;
-            --primary-light: #7d97ff;
-            --primary-dark: #4466ff;
-            
-            --accent-gold: #ffc83d;
-            --accent-cyan: #00d4ff;
-            --accent-purple: #b085ff;
-            --accent-pink: #ff6bd5;
-            --accent-green: #00e89d;
-            --accent-orange: #ff8c42;
-            --accent-red: #ff5757;
-            
-            --success: #00e89d;
-            --success-bg: rgba(0, 232, 157, 0.1);
-            --warning: #ffc83d;
-            --warning-bg: rgba(255, 200, 61, 0.1);
-            --error: #ff5757;
-            --error-bg: rgba(255, 87, 87, 0.1);
-            --info: #00d4ff;
-            --info-bg: rgba(0, 212, 255, 0.1);
-            
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.12);
-            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.18);
-            --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.24);
-            --shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.32);
-            
-            --radius-sm: 8px;
-            --radius-md: 12px;
-            --radius-lg: 16px;
-            --radius-xl: 20px;
-            --radius-2xl: 24px;
-            
+            --bg-primary: #0a0a0b;
+            --bg-secondary: #111113;
+            --bg-tertiary: #18181b;
+            --bg-card: #1a1a1f;
+            --bg-card-hover: #222228;
+            --bg-input: #0d0d0f;
+            --bg-overlay: rgba(10, 10, 11, 0.95);
+            --text-primary: #fafafa;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --text-dim: #52525b;
+            --border: rgba(255,255,255,0.08);
+            --border-hover: rgba(255,255,255,0.15);
+            --border-focus: rgba(6, 182, 212, 0.5);
+            --gold: #f59e0b;
+            --gold-light: #fbbf24;
+            --cyan: #06b6d4;
+            --cyan-light: #22d3ee;
+            --purple: #8b5cf6;
+            --purple-light: #a78bfa;
+            --green: #22c55e;
+            --green-light: #4ade80;
+            --red: #ef4444;
+            --red-light: #f87171;
+            --orange: #f97316;
+            --orange-light: #fb923c;
+            --pink: #ec4899;
+            --pink-light: #f472b6;
+            --radius: 16px;
+            --radius-sm: 12px;
+            --radius-xs: 8px;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            
+            --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
             --sidebar-width: 320px;
             --toolbar-height: 64px;
-            --statusbar-height: 32px;
-            
+            --statusbar-height: 36px;
             --font-xs: 11px;
             --font-sm: 12px;
             --font-base: 14px;
@@ -85,15 +72,6 @@
             --font-xl: 18px;
             --font-2xl: 24px;
             --font-3xl: 32px;
-            
-            --spacing-xs: 4px;
-            --spacing-sm: 8px;
-            --spacing-md: 12px;
-            --spacing-lg: 16px;
-            --spacing-xl: 20px;
-            --spacing-2xl: 24px;
-            --spacing-3xl: 32px;
-            --spacing-4xl: 40px;
         }
 
         @media (max-width: 1600px) {
@@ -140,6 +118,10 @@
             }
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         html, body {
             height: 100%;
             width: 100%;
@@ -162,9 +144,16 @@
             z-index: 0;
             pointer-events: none;
             background: 
-                radial-gradient(ellipse 100% 70% at 10% 20%, rgba(91, 127, 255, 0.08) 0%, transparent 60%),
-                radial-gradient(ellipse 80% 60% at 90% 80%, rgba(0, 212, 255, 0.06) 0%, transparent 60%),
-                radial-gradient(ellipse 60% 50% at 50% 50%, rgba(176, 133, 255, 0.05) 0%, transparent 60%);
+                radial-gradient(ellipse 80% 60% at 10% 20%, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 50% at 90% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse 40% 40% at 50% 50%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
+            animation: gradientShift 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes gradientShift {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
         }
 
         .modal-overlay {
@@ -178,7 +167,7 @@
             z-index: 9999;
             opacity: 1;
             transition: var(--transition);
-            padding: var(--spacing-lg);
+            padding: 24px;
         }
 
         .modal-overlay.hidden {
@@ -187,15 +176,15 @@
         }
 
         .modal {
-            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+            background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: var(--radius-2xl);
-            padding: var(--spacing-4xl);
+            border-radius: var(--radius);
+            padding: 40px;
             width: 100%;
             max-width: 480px;
             max-height: 90vh;
             overflow-y: auto;
-            box-shadow: var(--shadow-xl);
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
             transform: scale(1);
             transition: var(--transition);
             position: relative;
@@ -208,8 +197,8 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--accent-cyan), var(--accent-purple));
-            border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+            background: linear-gradient(90deg, var(--cyan), var(--purple), var(--gold));
+            border-radius: var(--radius) var(--radius) 0 0;
         }
 
         .modal-overlay.hidden .modal {
@@ -217,81 +206,86 @@
         }
 
         .modal-logo {
-            width: 96px;
-            height: 96px;
-            border-radius: 24px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--primary);
-            box-shadow: 0 0 0 8px rgba(91, 127, 255, 0.1), 0 8px 32px rgba(91, 127, 255, 0.3);
-            margin: 0 auto var(--spacing-2xl);
+            border: 3px solid var(--cyan);
+            box-shadow: 0 0 50px rgba(6, 182, 212, 0.25), 0 0 100px rgba(6, 182, 212, 0.1);
+            margin: 0 auto 24px;
             display: block;
+            transition: var(--transition);
+        }
+
+        .modal-logo:hover {
+            transform: scale(1.05) rotate(3deg);
+            box-shadow: 0 0 60px rgba(6, 182, 212, 0.4);
         }
 
         .modal h2 {
             font-family: 'Poppins', sans-serif;
-            font-size: var(--font-3xl);
+            font-size: clamp(28px, 6vw, 36px);
             font-weight: 800;
             text-align: center;
-            margin-bottom: var(--spacing-md);
-            background: linear-gradient(135deg, var(--primary-light), var(--accent-cyan));
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, var(--cyan-light) 0%, var(--purple-light) 50%, var(--gold-light) 100%);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            letter-spacing: -0.5px;
+            letter-spacing: -1px;
         }
 
         .modal-project {
             text-align: center;
             font-size: var(--font-md);
             color: var(--text-secondary);
-            margin-bottom: var(--spacing-3xl);
+            margin-bottom: 32px;
             font-weight: 500;
         }
 
         .modal-project strong {
-            color: var(--accent-cyan);
+            color: var(--cyan-light);
             font-weight: 700;
         }
 
         .form-group {
-            margin-bottom: var(--spacing-xl);
+            margin-bottom: 20px;
         }
 
         .form-group label {
             display: flex;
             align-items: center;
-            gap: var(--spacing-sm);
+            gap: 8px;
             font-size: var(--font-sm);
             font-weight: 600;
             color: var(--text-secondary);
-            margin-bottom: var(--spacing-md);
+            margin-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         .form-group label i {
-            color: var(--primary);
+            color: var(--cyan);
             font-size: var(--font-base);
         }
 
         .form-group input {
             width: 100%;
-            padding: var(--spacing-lg) var(--spacing-xl);
+            padding: 16px 20px;
             background: var(--bg-input);
-            border: 2px solid var(--border);
-            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
             color: var(--text-primary);
             font-size: var(--font-base);
             font-family: inherit;
             font-weight: 500;
             transition: var(--transition);
+            outline: none;
         }
 
         .form-group input:focus {
-            outline: none;
-            border-color: var(--primary);
-            background: var(--bg-secondary);
-            box-shadow: 0 0 0 4px rgba(91, 127, 255, 0.1);
+            border-color: var(--cyan);
+            box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.15);
         }
 
         .form-group input::placeholder {
@@ -303,9 +297,9 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: var(--spacing-md);
-            padding: var(--spacing-lg) var(--spacing-2xl);
-            border-radius: var(--radius-md);
+            gap: 10px;
+            padding: 16px 28px;
+            border-radius: var(--radius-sm);
             font-size: var(--font-base);
             font-weight: 700;
             text-decoration: none;
@@ -315,54 +309,82 @@
             font-family: inherit;
             position: relative;
             overflow: hidden;
+            white-space: nowrap;
         }
 
-        .btn::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .btn:hover::before {
-            opacity: 1;
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            box-shadow: 0 8px 24px rgba(91, 127, 255, 0.3);
+            background: linear-gradient(135deg, var(--cyan), var(--cyan-light));
+            color: var(--bg-primary);
+            box-shadow: 0 4px 24px rgba(6, 182, 212, 0.3);
             width: 100%;
         }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 32px rgba(91, 127, 255, 0.4);
+        .btn-primary:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(6, 182, 212, 0.45);
         }
 
-        .btn-primary:active {
-            transform: translateY(0);
+        .btn-success {
+            background: linear-gradient(135deg, var(--green), var(--green-light));
+            color: var(--bg-primary);
+            box-shadow: 0 4px 24px rgba(34, 197, 94, 0.3);
         }
 
-        .btn-primary:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
+        .btn-success:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(34, 197, 94, 0.45);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--purple), var(--purple-light));
+            color: var(--text-primary);
+            box-shadow: 0 4px 24px rgba(139, 92, 246, 0.25);
+        }
+
+        .btn-secondary:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(139, 92, 246, 0.4);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--bg-primary);
+            box-shadow: 0 4px 24px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-gold:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(245, 158, 11, 0.45);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, var(--red), var(--red-light));
+            color: var(--text-primary);
+            box-shadow: 0 4px 24px rgba(239, 68, 68, 0.25);
+        }
+
+        .btn-danger:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(239, 68, 68, 0.4);
         }
 
         .error-msg {
-            background: var(--error-bg);
-            border: 2px solid var(--error);
-            color: var(--error);
-            padding: var(--spacing-lg);
-            border-radius: var(--radius-md);
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: var(--red-light);
+            padding: 14px 16px;
+            border-radius: var(--radius-xs);
             font-size: var(--font-sm);
-            margin-bottom: var(--spacing-xl);
+            margin-bottom: 20px;
             display: none;
             align-items: center;
-            gap: var(--spacing-md);
+            gap: 10px;
             font-weight: 600;
         }
 
@@ -401,23 +423,29 @@
         }
 
         .sidebar-header {
-            padding: var(--spacing-xl);
+            padding: 20px;
             border-bottom: 1px solid var(--border);
             display: flex;
             align-items: center;
-            gap: var(--spacing-lg);
+            gap: 16px;
             flex-shrink: 0;
-            background: linear-gradient(135deg, rgba(91, 127, 255, 0.05), transparent);
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(6, 182, 212, 0.05));
         }
 
         .sidebar-logo {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
             object-fit: cover;
-            border: 2px solid var(--primary);
+            border: 2px solid var(--cyan);
             flex-shrink: 0;
-            box-shadow: 0 4px 16px rgba(91, 127, 255, 0.2);
+            box-shadow: 0 0 30px rgba(6, 182, 212, 0.2);
+            transition: var(--transition);
+        }
+
+        .sidebar-logo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(6, 182, 212, 0.3);
         }
 
         .sidebar-info {
@@ -445,27 +473,27 @@
             text-overflow: ellipsis;
             display: flex;
             align-items: center;
-            gap: var(--spacing-xs);
+            gap: 6px;
         }
 
         .sidebar-owner i {
-            color: var(--accent-cyan);
+            color: var(--gold);
         }
 
         .sidebar-actions {
-            padding: var(--spacing-lg);
+            padding: 16px;
             border-bottom: 1px solid var(--border);
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-            gap: var(--spacing-sm);
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
             flex-shrink: 0;
         }
 
         .sidebar-btn {
-            padding: var(--spacing-md);
+            padding: 12px;
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: var(--radius-sm);
+            border-radius: var(--radius-xs);
             color: var(--text-secondary);
             font-size: var(--font-xs);
             font-weight: 600;
@@ -475,7 +503,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: var(--spacing-xs);
+            gap: 6px;
             font-family: inherit;
             white-space: nowrap;
             overflow: hidden;
@@ -500,40 +528,41 @@
             transform: translateY(-2px);
         }
 
-        .sidebar-btn:active {
-            transform: translateY(0);
-        }
-
         .sidebar-btn.new-file:hover {
-            border-color: var(--accent-cyan);
-            color: var(--accent-cyan);
+            border-color: var(--cyan);
+            color: var(--cyan-light);
+            box-shadow: 0 4px 20px rgba(6, 182, 212, 0.15);
         }
 
         .sidebar-btn.new-folder:hover {
-            border-color: var(--accent-gold);
-            color: var(--accent-gold);
+            border-color: var(--gold);
+            color: var(--gold-light);
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.15);
         }
 
         .sidebar-btn.upload:hover {
-            border-color: var(--accent-purple);
-            color: var(--accent-purple);
+            border-color: var(--purple);
+            color: var(--purple-light);
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.15);
         }
 
         .sidebar-btn.refresh:hover {
-            border-color: var(--accent-green);
-            color: var(--accent-green);
+            border-color: var(--green);
+            color: var(--green-light);
+            box-shadow: 0 4px 20px rgba(34, 197, 94, 0.15);
         }
 
         .sidebar-btn.logout:hover {
-            border-color: var(--error);
-            color: var(--error);
+            border-color: var(--red);
+            color: var(--red-light);
+            box-shadow: 0 4px 20px rgba(239, 68, 68, 0.15);
         }
 
         .file-tree {
             flex: 1;
             overflow-y: auto;
             overflow-x: hidden;
-            padding: var(--spacing-lg);
+            padding: 16px;
             -webkit-overflow-scrolling: touch;
         }
 
@@ -557,9 +586,9 @@
         .tree-item {
             display: flex;
             align-items: center;
-            gap: var(--spacing-md);
-            padding: var(--spacing-md) var(--spacing-lg);
-            border-radius: var(--radius-sm);
+            gap: 12px;
+            padding: 12px 16px;
+            border-radius: var(--radius-xs);
             cursor: pointer;
             transition: var(--transition);
             font-size: var(--font-sm);
@@ -569,6 +598,8 @@
             overflow: hidden;
             font-weight: 500;
             position: relative;
+            border: 1px solid transparent;
+            margin-bottom: 4px;
         }
 
         .tree-item::before {
@@ -579,7 +610,7 @@
             transform: translateY(-50%);
             width: 3px;
             height: 0;
-            background: var(--primary);
+            background: linear-gradient(135deg, var(--cyan), var(--purple));
             border-radius: 0 2px 2px 0;
             transition: var(--transition);
         }
@@ -587,12 +618,14 @@
         .tree-item:hover {
             background: var(--bg-card);
             color: var(--text-primary);
+            border-color: var(--border);
         }
 
         .tree-item.active {
-            background: rgba(91, 127, 255, 0.12);
-            color: var(--primary-light);
+            background: rgba(6, 182, 212, 0.1);
+            color: var(--cyan-light);
             font-weight: 600;
+            border-color: rgba(6, 182, 212, 0.2);
         }
 
         .tree-item.active::before {
@@ -615,60 +648,24 @@
             text-overflow: ellipsis;
         }
 
-        .tree-item .fa-folder {
-            color: var(--accent-gold);
-        }
-
-        .tree-item .fa-folder-open {
-            color: var(--accent-orange);
-        }
-
-        .tree-item .fa-js {
-            color: #f7df1e;
-        }
-
-        .tree-item .fa-python {
-            color: #3776ab;
-        }
-
-        .tree-item .fa-react {
-            color: #61dafb;
-        }
-
-        .tree-item .fa-html5 {
-            color: #e34c26;
-        }
-
-        .tree-item .fa-css3-alt {
-            color: #264de4;
-        }
-
-        .tree-item .fa-file-code {
-            color: var(--accent-cyan);
-        }
-
-        .tree-item .fa-file-lines {
-            color: var(--text-secondary);
-        }
-
-        .tree-item .fa-file-image {
-            color: var(--accent-purple);
-        }
-
-        .tree-item .fa-lock {
-            color: var(--accent-red);
-        }
-
-        .tree-item .fa-git-alt {
-            color: #f05032;
-        }
-
-        .tree-item .fa-file {
-            color: var(--text-muted);
-        }
+        .tree-item .fa-folder { color: var(--gold); }
+        .tree-item .fa-folder-open { color: var(--orange); }
+        .tree-item .fa-js { color: #f7df1e; }
+        .tree-item .fa-python { color: #3776ab; }
+        .tree-item .fa-react { color: #61dafb; }
+        .tree-item .fa-html5 { color: #e34c26; }
+        .tree-item .fa-css3-alt { color: #264de4; }
+        .tree-item .fa-file-code { color: var(--cyan); }
+        .tree-item .fa-file-lines { color: var(--text-secondary); }
+        .tree-item .fa-file-image { color: var(--purple); }
+        .tree-item .fa-lock { color: var(--red); }
+        .tree-item .fa-git-alt { color: #f05032; }
+        .tree-item .fa-file { color: var(--text-muted); }
+        .tree-item .fa-php { color: #777bb4; }
+        .tree-item .fa-java { color: #007396; }
 
         .tree-children {
-            padding-left: var(--spacing-2xl);
+            padding-left: 24px;
             display: none;
         }
 
@@ -677,7 +674,7 @@
         }
 
         .tree-empty {
-            padding: var(--spacing-3xl) var(--spacing-xl);
+            padding: 40px 20px;
             text-align: center;
             color: var(--text-muted);
             font-size: var(--font-sm);
@@ -685,9 +682,12 @@
 
         .tree-empty i {
             font-size: var(--font-3xl);
-            margin-bottom: var(--spacing-lg);
+            margin-bottom: 16px;
             display: block;
-            color: var(--text-dim);
+            background: linear-gradient(135deg, var(--cyan), var(--purple));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
         .main-content {
@@ -700,12 +700,12 @@
 
         .toolbar {
             height: var(--toolbar-height);
-            padding: 0 var(--spacing-2xl);
+            padding: 0 24px;
             background: var(--bg-secondary);
             border-bottom: 1px solid var(--border);
             display: flex;
             align-items: center;
-            gap: var(--spacing-xl);
+            gap: 20px;
             flex-shrink: 0;
         }
 
@@ -713,25 +713,29 @@
             flex: 1;
             display: flex;
             align-items: center;
-            gap: var(--spacing-lg);
+            gap: 16px;
             min-width: 0;
             overflow: hidden;
         }
 
         .toolbar-icon-wrapper {
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(91, 127, 255, 0.1);
-            border-radius: var(--radius-sm);
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(139, 92, 246, 0.15));
+            border-radius: var(--radius-xs);
             flex-shrink: 0;
+            border: 1px solid var(--border);
         }
 
         .toolbar-icon-wrapper i {
             font-size: var(--font-xl);
-            color: var(--primary-light);
+            background: linear-gradient(135deg, var(--cyan-light), var(--purple-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
         .toolbar-file-info {
@@ -758,7 +762,8 @@
             text-overflow: ellipsis;
             display: flex;
             align-items: center;
-            gap: var(--spacing-xs);
+            gap: 6px;
+            font-family: 'JetBrains Mono', monospace;
         }
 
         .toolbar-path i {
@@ -767,20 +772,20 @@
 
         .toolbar-modified {
             font-size: var(--font-xs);
-            color: var(--warning);
+            color: var(--gold);
             font-weight: 700;
-            padding: var(--spacing-xs) var(--spacing-md);
-            background: var(--warning-bg);
-            border-radius: 6px;
+            padding: 6px 12px;
+            background: rgba(245, 158, 11, 0.1);
+            border-radius: 100px;
             display: none;
             flex-shrink: 0;
-            border: 1px solid rgba(255, 200, 61, 0.2);
+            border: 1px solid rgba(245, 158, 11, 0.2);
         }
 
         .toolbar-modified.show {
             display: inline-flex;
             align-items: center;
-            gap: var(--spacing-xs);
+            gap: 6px;
         }
 
         .toolbar-modified i {
@@ -789,21 +794,21 @@
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.3); }
         }
 
         .toolbar-actions {
             display: flex;
-            gap: var(--spacing-md);
+            gap: 10px;
             flex-shrink: 0;
         }
 
         .toolbar-btn {
-            padding: var(--spacing-md) var(--spacing-xl);
+            padding: 12px 20px;
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: var(--radius-sm);
+            border-radius: var(--radius-xs);
             color: var(--text-secondary);
             font-size: var(--font-sm);
             font-weight: 600;
@@ -811,7 +816,7 @@
             transition: var(--transition);
             display: flex;
             align-items: center;
-            gap: var(--spacing-sm);
+            gap: 8px;
             font-family: inherit;
             white-space: nowrap;
         }
@@ -820,31 +825,29 @@
             font-size: var(--font-base);
         }
 
-        .toolbar-btn:hover {
+        .toolbar-btn:hover:not(:disabled) {
             background: var(--bg-card-hover);
             color: var(--text-primary);
             border-color: var(--border-hover);
-            transform: translateY(-1px);
-        }
-
-        .toolbar-btn:active {
-            transform: translateY(0);
-        }
-
-        .toolbar-btn.save {
-            background: linear-gradient(135deg, var(--success), #00c785);
-            border-color: transparent;
-            color: white;
-        }
-
-        .toolbar-btn.save:hover {
-            box-shadow: 0 4px 16px rgba(0, 232, 157, 0.3);
+            transform: translateY(-2px);
         }
 
         .toolbar-btn:disabled {
             opacity: 0.5;
             cursor: not-allowed;
-            transform: none;
+        }
+
+        .toolbar-btn.save {
+            background: linear-gradient(135deg, var(--green), var(--green-light));
+            border-color: transparent;
+            color: var(--bg-primary);
+            font-weight: 700;
+            box-shadow: 0 4px 16px rgba(34, 197, 94, 0.25);
+        }
+
+        .toolbar-btn.save:hover:not(:disabled) {
+            box-shadow: 0 6px 24px rgba(34, 197, 94, 0.35);
+            transform: translateY(-2px);
         }
 
         .editor-container {
@@ -862,7 +865,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: var(--spacing-4xl);
+            padding: 48px;
             text-align: center;
         }
 
@@ -872,14 +875,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(91, 127, 255, 0.1), rgba(0, 212, 255, 0.1));
-            border-radius: 24px;
-            margin-bottom: var(--spacing-3xl);
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(139, 92, 246, 0.1));
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            margin-bottom: 32px;
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
         }
 
         .editor-welcome-icon i {
-            font-size: 64px;
-            background: linear-gradient(135deg, var(--primary), var(--accent-cyan));
+            font-size: 56px;
+            background: linear-gradient(135deg, var(--cyan), var(--purple));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -888,16 +893,19 @@
         .editor-welcome h3 {
             font-family: 'Poppins', sans-serif;
             font-size: var(--font-2xl);
-            font-weight: 700;
-            margin-bottom: var(--spacing-lg);
-            color: var(--text-primary);
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--cyan-light), var(--purple-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
         .editor-welcome p {
             font-size: var(--font-base);
-            color: var(--text-muted);
+            color: var(--text-secondary);
             max-width: 480px;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         .editor-wrapper {
@@ -944,7 +952,7 @@
         }
 
         .line-numbers {
-            padding: var(--spacing-lg) 0;
+            padding: 16px 0;
             background: var(--bg-secondary);
             border-right: 1px solid var(--border);
             text-align: right;
@@ -959,17 +967,18 @@
 
         .line-numbers span {
             display: block;
-            padding: 0 var(--spacing-lg);
+            padding: 0 16px;
             transition: var(--transition-fast);
         }
 
         .line-numbers span:hover {
             color: var(--text-secondary);
+            background: rgba(6, 182, 212, 0.05);
         }
 
         .code-editor {
             flex: 1;
-            padding: var(--spacing-lg);
+            padding: 16px;
             background: transparent;
             border: none;
             color: var(--text-primary);
@@ -992,7 +1001,7 @@
 
         .status-bar {
             height: var(--statusbar-height);
-            padding: 0 var(--spacing-2xl);
+            padding: 0 24px;
             background: var(--bg-tertiary);
             border-top: 1px solid var(--border);
             display: flex;
@@ -1001,20 +1010,20 @@
             font-size: var(--font-xs);
             color: var(--text-muted);
             flex-shrink: 0;
-            gap: var(--spacing-xl);
+            gap: 20px;
         }
 
         .status-left,
         .status-right {
             display: flex;
             align-items: center;
-            gap: var(--spacing-xl);
+            gap: 20px;
         }
 
         .status-item {
             display: flex;
             align-items: center;
-            gap: var(--spacing-sm);
+            gap: 8px;
             white-space: nowrap;
             font-weight: 500;
         }
@@ -1028,8 +1037,8 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: var(--success);
-            box-shadow: 0 0 8px var(--success);
+            background: var(--green);
+            box-shadow: 0 0 10px var(--green);
             flex-shrink: 0;
             animation: statusPulse 2s infinite;
         }
@@ -1043,10 +1052,10 @@
             position: fixed;
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: var(--spacing-sm) 0;
+            border-radius: var(--radius-sm);
+            padding: 8px 0;
             min-width: 200px;
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
             z-index: 10000;
             display: none;
         }
@@ -1068,10 +1077,10 @@
         }
 
         .context-item {
-            padding: var(--spacing-md) var(--spacing-xl);
+            padding: 12px 20px;
             display: flex;
             align-items: center;
-            gap: var(--spacing-md);
+            gap: 12px;
             cursor: pointer;
             transition: var(--transition-fast);
             font-size: var(--font-sm);
@@ -1085,8 +1094,8 @@
         }
 
         .context-item.danger:hover {
-            background: var(--error-bg);
-            color: var(--error);
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--red-light);
         }
 
         .context-item i {
@@ -1098,52 +1107,52 @@
         .context-divider {
             height: 1px;
             background: var(--border);
-            margin: var(--spacing-sm) 0;
+            margin: 8px 0;
         }
 
         .toast {
             position: fixed;
-            bottom: var(--spacing-2xl);
-            right: var(--spacing-2xl);
+            top: 20px;
+            right: 20px;
             background: var(--bg-card);
             border: 1px solid var(--border);
-            padding: var(--spacing-lg) var(--spacing-xl);
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-xl);
+            padding: 16px 20px;
+            border-radius: var(--radius-sm);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
             display: flex;
             align-items: center;
-            gap: var(--spacing-lg);
+            gap: 14px;
             z-index: 10001;
-            transform: translateY(120%);
+            transform: translateX(120%);
             opacity: 0;
             transition: var(--transition);
-            max-width: 420px;
-            min-width: 320px;
+            max-width: 400px;
+            min-width: 300px;
         }
 
         .toast.show {
-            transform: translateY(0);
+            transform: translateX(0);
             opacity: 1;
         }
 
         .toast.success {
-            border-color: var(--success);
-            background: linear-gradient(135deg, var(--bg-card), rgba(0, 232, 157, 0.05));
+            border-color: rgba(34, 197, 94, 0.3);
+            background: linear-gradient(135deg, var(--bg-card), rgba(34, 197, 94, 0.05));
         }
 
         .toast.success .toast-icon {
-            color: var(--success);
-            background: var(--success-bg);
+            color: var(--green);
+            background: rgba(34, 197, 94, 0.1);
         }
 
         .toast.error {
-            border-color: var(--error);
-            background: linear-gradient(135deg, var(--bg-card), rgba(255, 87, 87, 0.05));
+            border-color: rgba(239, 68, 68, 0.3);
+            background: linear-gradient(135deg, var(--bg-card), rgba(239, 68, 68, 0.05));
         }
 
         .toast.error .toast-icon {
-            color: var(--error);
-            background: var(--error-bg);
+            color: var(--red);
+            background: rgba(239, 68, 68, 0.1);
         }
 
         .toast-icon {
@@ -1152,7 +1161,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: var(--radius-sm);
+            border-radius: var(--radius-xs);
             font-size: var(--font-xl);
             flex-shrink: 0;
         }
@@ -1178,7 +1187,7 @@
             color: var(--text-muted);
             cursor: pointer;
             font-size: var(--font-lg);
-            padding: var(--spacing-sm);
+            padding: 8px;
             transition: var(--transition-fast);
             flex-shrink: 0;
         }
@@ -1199,7 +1208,7 @@
             opacity: 0;
             pointer-events: none;
             transition: var(--transition);
-            padding: var(--spacing-lg);
+            padding: 24px;
         }
 
         .create-modal.show {
@@ -1208,15 +1217,15 @@
         }
 
         .create-modal-content {
-            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+            background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: var(--radius-2xl);
-            padding: var(--spacing-3xl);
+            border-radius: var(--radius);
+            padding: 32px;
             width: 100%;
             max-width: 480px;
             max-height: 90vh;
             overflow-y: auto;
-            box-shadow: var(--shadow-xl);
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
             transform: scale(0.9);
             transition: var(--transition);
         }
@@ -1229,36 +1238,40 @@
             font-family: 'Poppins', sans-serif;
             font-size: var(--font-2xl);
             font-weight: 700;
-            margin-bottom: var(--spacing-2xl);
+            margin-bottom: 24px;
             display: flex;
             align-items: center;
-            gap: var(--spacing-md);
+            gap: 12px;
+            background: linear-gradient(135deg, var(--cyan-light), var(--purple-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
         .create-modal h3 i {
             font-size: var(--font-xl);
-            color: var(--primary);
+            color: var(--cyan);
         }
 
         .create-type-btns {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: var(--spacing-lg);
-            margin-bottom: var(--spacing-2xl);
+            gap: 12px;
+            margin-bottom: 24px;
         }
 
         .create-type-btn {
-            padding: var(--spacing-2xl) var(--spacing-lg);
+            padding: 24px 16px;
             background: var(--bg-input);
             border: 2px solid var(--border);
-            border-radius: var(--radius-md);
+            border-radius: var(--radius-sm);
             color: var(--text-secondary);
             cursor: pointer;
             transition: var(--transition);
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: var(--spacing-md);
+            gap: 12px;
             font-family: inherit;
         }
 
@@ -1275,29 +1288,29 @@
             border-color: var(--border-hover);
             background: var(--bg-card);
             color: var(--text-primary);
-            transform: translateY(-2px);
-        }
-
-        .create-type-btn:active {
-            transform: translateY(0);
+            transform: translateY(-4px);
         }
 
         .create-type-btn.active {
-            border-color: var(--primary);
-            background: rgba(91, 127, 255, 0.12);
-            color: var(--primary-light);
+            border-color: var(--cyan);
+            background: rgba(6, 182, 212, 0.1);
+            color: var(--cyan-light);
+        }
+
+        .create-type-btn.active i {
+            color: var(--cyan);
         }
 
         .create-modal-actions {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: var(--spacing-lg);
-            margin-top: var(--spacing-2xl);
+            gap: 12px;
+            margin-top: 24px;
         }
 
         .create-modal-actions button {
-            padding: var(--spacing-lg);
-            border-radius: var(--radius-md);
+            padding: 16px;
+            border-radius: var(--radius-sm);
             font-size: var(--font-base);
             font-weight: 700;
             cursor: pointer;
@@ -1307,7 +1320,7 @@
 
         .create-cancel {
             background: var(--bg-input);
-            border: 2px solid var(--border);
+            border: 1px solid var(--border);
             color: var(--text-secondary);
         }
 
@@ -1318,19 +1331,15 @@
         }
 
         .create-confirm {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            background: linear-gradient(135deg, var(--cyan), var(--cyan-light));
             border: none;
-            color: white;
-            box-shadow: 0 4px 16px rgba(91, 127, 255, 0.2);
+            color: var(--bg-primary);
+            box-shadow: 0 4px 20px rgba(6, 182, 212, 0.25);
         }
 
         .create-confirm:hover {
-            box-shadow: 0 8px 24px rgba(91, 127, 255, 0.3);
+            box-shadow: 0 8px 28px rgba(6, 182, 212, 0.35);
             transform: translateY(-2px);
-        }
-
-        .create-confirm:active {
-            transform: translateY(0);
         }
 
         .upload-modal-content {
@@ -1339,8 +1348,8 @@
 
         .upload-dropzone {
             border: 2px dashed var(--border);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-4xl) var(--spacing-2xl);
+            border-radius: var(--radius-sm);
+            padding: 48px 24px;
             text-align: center;
             transition: var(--transition);
             cursor: pointer;
@@ -1349,8 +1358,8 @@
 
         .upload-dropzone:hover,
         .upload-dropzone.dragover {
-            border-color: var(--primary);
-            background: rgba(91, 127, 255, 0.05);
+            border-color: var(--cyan);
+            background: rgba(6, 182, 212, 0.05);
         }
 
         .upload-dropzone-icon {
@@ -1359,14 +1368,17 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(91, 127, 255, 0.1);
-            border-radius: 16px;
-            margin: 0 auto var(--spacing-xl);
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(139, 92, 246, 0.1));
+            border-radius: 20px;
+            margin: 0 auto 20px;
         }
 
         .upload-dropzone-icon i {
-            font-size: 40px;
-            color: var(--primary);
+            font-size: 36px;
+            background: linear-gradient(135deg, var(--cyan), var(--purple));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
         .upload-dropzone p {
@@ -1376,7 +1388,7 @@
         }
 
         .upload-dropzone span {
-            color: var(--primary);
+            color: var(--cyan);
             font-weight: 700;
         }
 
@@ -1388,8 +1400,8 @@
             display: inline-block;
             width: 18px;
             height: 18px;
-            border: 3px solid rgba(255, 255, 255, 0.2);
-            border-top-color: white;
+            border: 3px solid rgba(10, 10, 11, 0.2);
+            border-top-color: var(--bg-primary);
             border-radius: 50%;
             animation: spin 0.8s linear infinite;
         }
@@ -1431,7 +1443,7 @@
             }
 
             .toolbar {
-                padding: 0 var(--spacing-lg);
+                padding: 0 16px;
             }
 
             .toolbar-file {
@@ -1448,11 +1460,11 @@
             }
 
             .toolbar-btn {
-                padding: var(--spacing-md);
+                padding: 12px;
             }
 
             .status-bar {
-                padding: 0 var(--spacing-lg);
+                padding: 0 16px;
             }
 
             .status-right {
@@ -1460,19 +1472,20 @@
             }
 
             .toast {
-                left: var(--spacing-lg);
-                right: var(--spacing-lg);
-                bottom: var(--spacing-lg);
+                left: 16px;
+                right: 16px;
+                bottom: 16px;
+                top: auto;
                 max-width: none;
                 min-width: 0;
             }
 
             .modal {
-                padding: var(--spacing-2xl);
+                padding: 28px;
             }
 
             .create-modal-content {
-                padding: var(--spacing-2xl);
+                padding: 24px;
             }
         }
 
@@ -1765,90 +1778,93 @@
     </div>
 
     <script>
-        let sessionId = null;
-        let currentFile = null;
-        let isModified = false;
-        let originalContent = '';
-        let contextTarget = null;
-        let createIsFolder = false;
-        let currentFolderPath = '';
+        var sessionId = null;
+        var currentFile = null;
+        var isModified = false;
+        var originalContent = '';
+        var contextTarget = null;
+        var createIsFolder = false;
+        var currentFolderPath = '';
 
-        const urlParams = new URLSearchParams(window.location.search);
+        var urlParams = new URLSearchParams(window.location.search);
         sessionId = urlParams.get('session');
 
-        const loginModal = document.getElementById('login-modal');
-        const loginForm = document.getElementById('login-form');
-        const loginError = document.getElementById('login-error');
-        const loginBtn = document.getElementById('login-btn');
-        const app = document.getElementById('app');
-        const fileTree = document.getElementById('file-tree');
-        const codeEditor = document.getElementById('code-editor');
-        const lineNumbers = document.getElementById('line-numbers');
-        const editorWelcome = document.getElementById('editor-welcome');
-        const editorWrapper = document.getElementById('editor-wrapper');
-        const saveBtn = document.getElementById('save-btn');
-        const downloadBtn = document.getElementById('download-btn');
-        const toolbarModified = document.getElementById('toolbar-modified');
-        const contextMenu = document.getElementById('context-menu');
-        const createModal = document.getElementById('create-modal');
-        const uploadModal = document.getElementById('upload-modal');
-        const toast = document.getElementById('toast');
+        var loginModal = document.getElementById('login-modal');
+        var loginForm = document.getElementById('login-form');
+        var loginError = document.getElementById('login-error');
+        var loginBtn = document.getElementById('login-btn');
+        var app = document.getElementById('app');
+        var fileTree = document.getElementById('file-tree');
+        var codeEditor = document.getElementById('code-editor');
+        var lineNumbers = document.getElementById('line-numbers');
+        var editorWelcome = document.getElementById('editor-welcome');
+        var editorWrapper = document.getElementById('editor-wrapper');
+        var saveBtn = document.getElementById('save-btn');
+        var downloadBtn = document.getElementById('download-btn');
+        var toolbarModified = document.getElementById('toolbar-modified');
+        var contextMenu = document.getElementById('context-menu');
+        var createModal = document.getElementById('create-modal');
+        var uploadModal = document.getElementById('upload-modal');
+        var toast = document.getElementById('toast');
 
-        async function init() {
+        function init() {
             if (!sessionId) {
                 showError('No session ID provided. Please use a valid edit URL.');
                 return;
             }
 
-            try {
-                const res = await fetch('/api/session?session_id=' + sessionId);
-                if (!res.ok) throw new Error('Invalid session');
-                
-                const data = await res.json();
-                document.getElementById('modal-project-name').textContent = data.project_name;
-            } catch (e) {
-                showError('Invalid or expired session. Please request a new edit URL.');
-            }
+            fetch('/api/session?session_id=' + sessionId)
+                .then(function(res) {
+                    if (!res.ok) throw new Error('Invalid session');
+                    return res.json();
+                })
+                .then(function(data) {
+                    document.getElementById('modal-project-name').textContent = data.project_name;
+                })
+                .catch(function(e) {
+                    showError('Invalid or expired session. Please request a new edit URL.');
+                });
         }
 
-        loginForm.addEventListener('submit', async (e) => {
+        loginForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
             
             loginBtn.disabled = true;
             loginBtn.innerHTML = '<span class="loading"></span><span>Signing in...</span>';
             hideError();
 
-            try {
-                const res = await fetch('/api/auth', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ session_id: sessionId, username: username, password: password })
-                });
-
+            fetch('/api/auth', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ session_id: sessionId, username: username, password: password })
+            })
+            .then(function(res) {
                 if (!res.ok) {
-                    const err = await res.json();
-                    throw new Error(err.detail || 'Invalid credentials');
+                    return res.json().then(function(err) {
+                        throw new Error(err.detail || 'Invalid credentials');
+                    });
                 }
-
-                const data = await res.json();
-                
+                return res.json();
+            })
+            .then(function(data) {
                 document.getElementById('project-name').textContent = data.project_name;
                 document.getElementById('owner-name').textContent = data.owner_name;
                 
                 loginModal.classList.add('hidden');
                 app.classList.remove('hidden');
                 
-                await loadFileTree();
-                
-            } catch (e) {
+                loadFileTree();
+            })
+            .catch(function(e) {
                 showError(e.message);
-            } finally {
+            })
+            .finally(function() {
                 loginBtn.disabled = false;
                 loginBtn.innerHTML = '<i class="fa-solid fa-arrow-right-to-bracket"></i><span>Sign In</span>';
-            }
+            });
         });
 
         function showError(msg) {
@@ -1860,16 +1876,18 @@
             loginError.classList.remove('show');
         }
 
-        async function loadFileTree() {
-            try {
-                const res = await fetch('/api/files/tree?session_id=' + sessionId);
-                if (!res.ok) throw new Error('Failed to load files');
-                
-                const data = await res.json();
-                renderTree(data.tree);
-            } catch (e) {
-                fileTree.innerHTML = '<div class="tree-empty"><i class="fa-solid fa-triangle-exclamation"></i>' + e.message + '</div>';
-            }
+        function loadFileTree() {
+            fetch('/api/files/tree?session_id=' + sessionId)
+                .then(function(res) {
+                    if (!res.ok) throw new Error('Failed to load files');
+                    return res.json();
+                })
+                .then(function(data) {
+                    renderTree(data.tree);
+                })
+                .catch(function(e) {
+                    fileTree.innerHTML = '<div class="tree-empty"><i class="fa-solid fa-triangle-exclamation"></i>' + e.message + '</div>';
+                });
         }
 
         function renderTree(items, container) {
@@ -1886,18 +1904,18 @@
             }
 
             items.forEach(function(item) {
-                const div = document.createElement('div');
+                var div = document.createElement('div');
                 
                 if (item.type === 'folder') {
                     div.innerHTML = '<div class="tree-item folder" data-path="' + item.path + '" onclick="toggleFolder(this)"><i class="fa-solid fa-folder"></i><span>' + item.name + '</span></div><div class="tree-children" data-folder="' + item.path + '"></div>';
                     container.appendChild(div);
                     
                     if (item.children && item.children.length > 0) {
-                        const childContainer = div.querySelector('.tree-children');
+                        var childContainer = div.querySelector('.tree-children');
                         renderTree(item.children, childContainer);
                     }
                 } else {
-                    const icon = getFileIcon(item.name);
+                    var icon = getFileIcon(item.name);
                     div.innerHTML = '<div class="tree-item" data-path="' + item.path + '" onclick="openFile(\'' + item.path + '\', \'' + item.name + '\')" oncontextmenu="showContextMenu(event, \'' + item.path + '\', \'' + item.name + '\', false)"><i class="' + icon + '"></i><span>' + item.name + '</span></div>';
                     container.appendChild(div);
                 }
@@ -1905,16 +1923,20 @@
         }
 
         function getFileIcon(name) {
-            const ext = name.split('.').pop().toLowerCase();
-            const icons = {
+            var ext = name.split('.').pop().toLowerCase();
+            var icons = {
                 'js': 'fa-brands fa-js',
-                'ts': 'fa-solid fa-file-code',
-                'tsx': 'fa-brands fa-react',
                 'jsx': 'fa-brands fa-react',
+                'ts': 'fa-brands fa-js',
+                'tsx': 'fa-brands fa-react',
                 'py': 'fa-brands fa-python',
                 'html': 'fa-brands fa-html5',
+                'htm': 'fa-brands fa-html5',
                 'css': 'fa-brands fa-css3-alt',
+                'scss': 'fa-brands fa-sass',
+                'sass': 'fa-brands fa-sass',
                 'json': 'fa-solid fa-file-code',
+                'xml': 'fa-solid fa-file-code',
                 'md': 'fa-solid fa-file-lines',
                 'txt': 'fa-solid fa-file-lines',
                 'png': 'fa-solid fa-file-image',
@@ -1922,102 +1944,122 @@
                 'jpeg': 'fa-solid fa-file-image',
                 'gif': 'fa-solid fa-file-image',
                 'svg': 'fa-solid fa-file-image',
+                'ico': 'fa-solid fa-file-image',
+                'webp': 'fa-solid fa-file-image',
                 'env': 'fa-solid fa-lock',
-                'gitignore': 'fa-brands fa-git-alt'
+                'gitignore': 'fa-brands fa-git-alt',
+                'php': 'fa-brands fa-php',
+                'java': 'fa-brands fa-java',
+                'c': 'fa-solid fa-file-code',
+                'cpp': 'fa-solid fa-file-code',
+                'h': 'fa-solid fa-file-code',
+                'rb': 'fa-solid fa-gem',
+                'go': 'fa-solid fa-file-code',
+                'rs': 'fa-solid fa-file-code',
+                'sql': 'fa-solid fa-database',
+                'sh': 'fa-solid fa-terminal',
+                'bash': 'fa-solid fa-terminal',
+                'yml': 'fa-solid fa-file-code',
+                'yaml': 'fa-solid fa-file-code',
+                'lock': 'fa-solid fa-lock',
+                'vue': 'fa-brands fa-vuejs',
+                'svelte': 'fa-solid fa-file-code'
             };
             return icons[ext] || 'fa-solid fa-file';
         }
 
         function toggleFolder(el) {
-            const children = el.nextElementSibling;
-            const icon = el.querySelector('i');
+            var path = el.dataset.path;
+            var children = el.nextElementSibling;
+            var icon = el.querySelector('i');
             
-            if (children.classList.contains('open')) {
-                children.classList.remove('open');
-                icon.classList.remove('fa-folder-open');
-                icon.classList.add('fa-folder');
-            } else {
-                children.classList.add('open');
-                icon.classList.remove('fa-folder');
-                icon.classList.add('fa-folder-open');
+            if (children && children.classList.contains('tree-children')) {
+                children.classList.toggle('open');
+                if (children.classList.contains('open')) {
+                    icon.className = 'fa-solid fa-folder-open';
+                } else {
+                    icon.className = 'fa-solid fa-folder';
+                }
             }
         }
 
-        async function openFile(path, name) {
+        function openFile(path, name) {
             if (isModified && !confirm('You have unsaved changes. Discard them?')) {
                 return;
             }
 
-            try {
-                const res = await fetch('/api/files/read?session_id=' + sessionId + '&path=' + encodeURIComponent(path));
-                if (!res.ok) {
-                    const err = await res.json();
-                    throw new Error(err.detail || 'Failed to open file');
-                }
-
-                const data = await res.json();
-                
-                currentFile = { path: path, name: name };
-                originalContent = data.content;
-                codeEditor.value = data.content;
-                
-                document.getElementById('toolbar-filename').textContent = name;
-                document.getElementById('toolbar-path').querySelector('span').textContent = path;
-                document.getElementById('toolbar-icon').className = getFileIcon(name);
-                
-                editorWelcome.style.display = 'none';
-                editorWrapper.classList.add('active');
-                
-                saveBtn.disabled = false;
-                downloadBtn.disabled = false;
-                
-                updateLineNumbers();
-                setModified(false);
-                
-                document.querySelectorAll('.tree-item').forEach(function(item) {
-                    item.classList.remove('active');
-                    if (item.dataset.path === path) {
-                        item.classList.add('active');
-                    }
-                });
-                
-            } catch (e) {
-                showToast('Error', e.message, 'error');
+            document.querySelectorAll('.tree-item').forEach(function(item) {
+                item.classList.remove('active');
+            });
+            
+            var activeItem = document.querySelector('.tree-item[data-path="' + path + '"]');
+            if (activeItem) {
+                activeItem.classList.add('active');
             }
+
+            document.getElementById('toolbar-filename').textContent = name;
+            document.getElementById('toolbar-path').querySelector('span').textContent = path;
+            document.getElementById('toolbar-icon').className = getFileIcon(name);
+
+            fetch('/api/files/read?session_id=' + sessionId + '&path=' + encodeURIComponent(path))
+                .then(function(res) {
+                    if (!res.ok) throw new Error('Failed to load file');
+                    return res.json();
+                })
+                .then(function(data) {
+                    currentFile = { path: path, name: name };
+                    originalContent = data.content || '';
+                    codeEditor.value = originalContent;
+                    
+                    editorWelcome.style.display = 'none';
+                    editorWrapper.classList.add('active');
+                    
+                    updateLineNumbers();
+                    setModified(false);
+                    
+                    saveBtn.disabled = false;
+                    downloadBtn.disabled = false;
+                })
+                .catch(function(e) {
+                    showToast('Error', e.message, 'error');
+                });
         }
 
-        async function saveFile() {
+        function saveFile() {
             if (!currentFile) return;
-
+            
             saveBtn.disabled = true;
             saveBtn.innerHTML = '<span class="loading"></span><span>Saving...</span>';
 
-            try {
-                const res = await fetch('/api/files/write', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        session_id: sessionId,
-                        path: currentFile.path,
-                        content: codeEditor.value
-                    })
-                });
-
+            fetch('/api/files/save', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    session_id: sessionId,
+                    path: currentFile.path,
+                    content: codeEditor.value
+                })
+            })
+            .then(function(res) {
                 if (!res.ok) {
-                    const err = await res.json();
-                    throw new Error(err.detail || 'Failed to save');
+                    return res.json().then(function(err) {
+                        throw new Error(err.detail || 'Failed to save');
+                    });
                 }
-
+                return res.json();
+            })
+            .then(function() {
                 originalContent = codeEditor.value;
                 setModified(false);
                 showToast('Success', 'File saved successfully!', 'success');
-                
-            } catch (e) {
+            })
+            .catch(function(e) {
                 showToast('Error', e.message, 'error');
-            } finally {
+            })
+            .finally(function() {
                 saveBtn.disabled = false;
                 saveBtn.innerHTML = '<i class="fa-solid fa-floppy-disk"></i><span>Save</span>';
-            }
+            });
         }
 
         function downloadFile() {
@@ -2026,9 +2068,9 @@
         }
 
         function updateLineNumbers() {
-            const lines = codeEditor.value.split('\n').length;
-            let html = '';
-            for (let i = 1; i <= lines; i++) {
+            var lines = codeEditor.value.split('\n').length;
+            var html = '';
+            for (var i = 1; i <= lines; i++) {
                 html += '<span>' + i + '</span>';
             }
             lineNumbers.innerHTML = html;
@@ -2057,18 +2099,18 @@
         codeEditor.addEventListener('keyup', updateCursor);
 
         function updateCursor() {
-            const text = codeEditor.value.substring(0, codeEditor.selectionStart);
-            const lines = text.split('\n');
-            const line = lines.length;
-            const col = lines[lines.length - 1].length + 1;
+            var text = codeEditor.value.substring(0, codeEditor.selectionStart);
+            var lines = text.split('\n');
+            var line = lines.length;
+            var col = lines[lines.length - 1].length + 1;
             document.getElementById('status-cursor').querySelector('span').textContent = 'Ln ' + line + ', Col ' + col;
         }
 
         codeEditor.addEventListener('keydown', function(e) {
             if (e.key === 'Tab') {
                 e.preventDefault();
-                const start = codeEditor.selectionStart;
-                const end = codeEditor.selectionEnd;
+                var start = codeEditor.selectionStart;
+                var end = codeEditor.selectionEnd;
                 codeEditor.value = codeEditor.value.substring(0, start) + '    ' + codeEditor.value.substring(end);
                 codeEditor.selectionStart = codeEditor.selectionEnd = start + 4;
                 updateLineNumbers();
@@ -2094,34 +2136,36 @@
             contextMenu.classList.remove('show');
         });
 
-        async function contextRename() {
+        function contextRename() {
             if (!contextTarget) return;
             
-            const newName = prompt('Enter new name:', contextTarget.name);
+            var newName = prompt('Enter new name:', contextTarget.name);
             if (!newName || newName === contextTarget.name) return;
 
-            try {
-                const res = await fetch('/api/files/rename', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        session_id: sessionId,
-                        old_path: contextTarget.path,
-                        new_name: newName
-                    })
-                });
-
+            fetch('/api/files/rename', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    session_id: sessionId,
+                    old_path: contextTarget.path,
+                    new_name: newName
+                })
+            })
+            .then(function(res) {
                 if (!res.ok) {
-                    const err = await res.json();
-                    throw new Error(err.detail || 'Failed to rename');
+                    return res.json().then(function(err) {
+                        throw new Error(err.detail || 'Failed to rename');
+                    });
                 }
-
+                return res.json();
+            })
+            .then(function() {
                 showToast('Success', 'Renamed successfully!', 'success');
-                await loadFileTree();
-                
-            } catch (e) {
+                loadFileTree();
+            })
+            .catch(function(e) {
                 showToast('Error', e.message, 'error');
-            }
+            });
         }
 
         function contextDownload() {
@@ -2129,26 +2173,28 @@
             window.open('/api/files/download?session_id=' + sessionId + '&path=' + encodeURIComponent(contextTarget.path), '_blank');
         }
 
-        async function contextDelete() {
+        function contextDelete() {
             if (!contextTarget) return;
             
             if (!confirm('Are you sure you want to delete "' + contextTarget.name + '"?')) return;
 
-            try {
-                const res = await fetch('/api/files/delete', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        session_id: sessionId,
-                        path: contextTarget.path
-                    })
-                });
-
+            fetch('/api/files/delete', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    session_id: sessionId,
+                    path: contextTarget.path
+                })
+            })
+            .then(function(res) {
                 if (!res.ok) {
-                    const err = await res.json();
-                    throw new Error(err.detail || 'Failed to delete');
+                    return res.json().then(function(err) {
+                        throw new Error(err.detail || 'Failed to delete');
+                    });
                 }
-
+                return res.json();
+            })
+            .then(function() {
                 showToast('Success', 'Deleted successfully!', 'success');
                 
                 if (currentFile && currentFile.path === contextTarget.path) {
@@ -2160,11 +2206,11 @@
                     downloadBtn.disabled = true;
                 }
                 
-                await loadFileTree();
-                
-            } catch (e) {
+                loadFileTree();
+            })
+            .catch(function(e) {
                 showToast('Error', e.message, 'error');
-            }
+            });
         }
 
         function showCreateModal(isFolder) {
@@ -2195,40 +2241,42 @@
             document.getElementById('create-name').placeholder = createIsFolder ? 'folder-name' : 'filename.ext';
         }
 
-        async function createItem() {
-            const name = document.getElementById('create-name').value.trim();
+        function createItem() {
+            var name = document.getElementById('create-name').value.trim();
             if (!name) {
                 showToast('Error', 'Please enter a name', 'error');
                 return;
             }
 
-            try {
-                const res = await fetch('/api/files/create', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        session_id: sessionId,
-                        path: name,
-                        is_folder: createIsFolder
-                    })
-                });
-
+            fetch('/api/files/create', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    session_id: sessionId,
+                    path: name,
+                    is_folder: createIsFolder
+                })
+            })
+            .then(function(res) {
                 if (!res.ok) {
-                    const err = await res.json();
-                    throw new Error(err.detail || 'Failed to create');
+                    return res.json().then(function(err) {
+                        throw new Error(err.detail || 'Failed to create');
+                    });
                 }
-
+                return res.json();
+            })
+            .then(function() {
                 hideCreateModal();
                 showToast('Success', (createIsFolder ? 'Folder' : 'File') + ' created successfully!', 'success');
-                await loadFileTree();
-                
-            } catch (e) {
+                loadFileTree();
+            })
+            .catch(function(e) {
                 showToast('Error', e.message, 'error');
-            }
+            });
         }
 
-        const uploadDropzone = document.getElementById('upload-dropzone');
-        const fileUpload = document.getElementById('file-upload');
+        var uploadDropzone = document.getElementById('upload-dropzone');
+        var fileUpload = document.getElementById('file-upload');
 
         function showUploadModal() {
             uploadModal.classList.add('show');
@@ -2249,69 +2297,72 @@
             uploadDropzone.classList.remove('dragover');
         });
 
-        uploadDropzone.addEventListener('drop', async function(e) {
+        uploadDropzone.addEventListener('drop', function(e) {
             e.preventDefault();
             uploadDropzone.classList.remove('dragover');
             
-            const files = e.dataTransfer.files;
-            await uploadFiles(files);
+            var files = e.dataTransfer.files;
+            uploadFiles(files);
         });
 
-        fileUpload.addEventListener('change', async function(e) {
-            await uploadFiles(e.target.files);
+        fileUpload.addEventListener('change', function(e) {
+            uploadFiles(e.target.files);
         });
 
-        async function uploadFiles(files) {
-            for (let i = 0; i < files.length; i++) {
-                const file = files[i];
-                const formData = new FormData();
-                formData.append('session_id', sessionId);
-                formData.append('path', '');
-                formData.append('file', file);
+        function uploadFiles(files) {
+            var uploadPromises = [];
+            
+            for (var i = 0; i < files.length; i++) {
+                (function(file) {
+                    var formData = new FormData();
+                    formData.append('session_id', sessionId);
+                    formData.append('path', '');
+                    formData.append('file', file);
 
-                try {
-                    const res = await fetch('/api/files/upload', {
+                    var promise = fetch('/api/files/upload', {
                         method: 'POST',
                         body: formData
+                    })
+                    .then(function(res) {
+                        if (!res.ok) {
+                            return res.json().then(function(err) {
+                                throw new Error(err.detail || 'Upload failed');
+                            });
+                        }
+                        showToast('Success', file.name + ' uploaded successfully!', 'success');
+                    })
+                    .catch(function(e) {
+                        showToast('Error', 'Failed to upload ' + file.name + ': ' + e.message, 'error');
                     });
-
-                    if (!res.ok) {
-                        const err = await res.json();
-                        throw new Error(err.detail || 'Upload failed');
-                    }
-
-                    showToast('Success', file.name + ' uploaded successfully!', 'success');
                     
-                } catch (e) {
-                    showToast('Error', 'Failed to upload ' + file.name + ': ' + e.message, 'error');
-                }
+                    uploadPromises.push(promise);
+                })(files[i]);
             }
             
-            hideUploadModal();
-            await loadFileTree();
+            Promise.all(uploadPromises).then(function() {
+                hideUploadModal();
+                loadFileTree();
+            });
         }
 
-        async function refreshTree() {
+        function refreshTree() {
             fileTree.innerHTML = '<div class="tree-empty"><i class="fa-solid fa-spinner fa-spin"></i>Loading files...</div>';
-            await loadFileTree();
+            loadFileTree();
             showToast('Success', 'File tree refreshed!', 'success');
         }
 
-        async function logout() {
+        function logout() {
             if (isModified && !confirm('You have unsaved changes. Are you sure you want to logout?')) {
                 return;
             }
 
-            try {
-                await fetch('/api/logout');
-            } catch (e) {}
-
+            fetch('/api/logout').catch(function() {});
             window.location.reload();
         }
 
         function showToast(title, message, type) {
             if (!type) type = 'success';
-            const icon = type === 'success' ? 'fa-circle-check' : 'fa-circle-exclamation';
+            var icon = type === 'success' ? 'fa-circle-check' : 'fa-circle-exclamation';
             toast.className = 'toast ' + type + ' show';
             toast.querySelector('.toast-icon i').className = 'fa-solid ' + icon;
             document.getElementById('toast-title').textContent = title;
